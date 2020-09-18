@@ -120,12 +120,13 @@
     animation: muovi-a-destra-e-torna infinite linear 4s;
 }
 
+/* misure prese dall'inspector */
 @keyframes muovi-a-destra-e-torna {
   0% {
     left: 10%;
   }
   50% {
-    left: calc(100% - 90px);
+    left: calc(100% - 60px);
   }
   100% {
     left: 10%;
@@ -133,6 +134,52 @@
 }
 
 .ex-12-button:hover .ex-12-bottom-white{
+    animation: muovi-a-sinistra-e-torna infinite linear 4s;
+}
+
+@keyframes muovi-a-sinistra-e-torna {
+  0% {
+    right: 20%;
+  }
+  50% {
+    right: calc(100% - 60px);
+  }
+  100% {
+    right: 20%;
+  }
+}
+
+/* ESERCIZIO13 */
+.ex-13-button:hover .ex-13-top-white{
+    animation: gira-in-tondo infinite linear 4s;
+}
+
+@keyframes gira-in-tondo {
+  0% {
+    left: 10%;
+  }
+  30% {
+    left: calc(100% - 30px);
+    top: -10px;
+  }
+  45% {
+    left: calc(100% - 30px);
+    top: calc(100% - 10px);
+  }
+  75% {
+    left: -30px;
+    top: calc(100% - 10px);
+  }
+  90% {
+    left: -30px;
+    top: -10px;
+  }
+  100%{
+    left: 10%;
+  }
+}
+
+/* .ex-13-button:hover .ex-13-bottom-white{
     animation: muovi-a-sinistra-e-torna infinite linear 4s;
 }
 
@@ -146,4 +193,4 @@
   100% {
     left: calc(100% - 90px);
   }
-}
+} */
