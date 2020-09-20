@@ -116,40 +116,35 @@
 }
 
 /* ESERCIZIO12 */
+/* misure prese dall'inspector */
 .ex-12-button:hover .ex-12-top-white{
-    animation: muovi-a-destra-e-torna infinite linear 4s;
+    animation: muovi-a-destra 4s forwards;
 }
 
-/* misure prese dall'inspector */
-@keyframes muovi-a-destra-e-torna {
+@keyframes muovi-a-destra {
   0% {
     left: 10%;
   }
-  50% {
-    left: calc(100% - 60px);
-  }
   100% {
-    left: 10%;
+    left: calc(100% - 60px);
   }
 }
 
 .ex-12-button:hover .ex-12-bottom-white{
-    animation: muovi-a-sinistra-e-torna infinite linear 4s;
+    animation: muovi-a-sinistra 4s forwards;
 }
 
-@keyframes muovi-a-sinistra-e-torna {
+@keyframes muovi-a-sinistra {
   0% {
     right: 20%;
   }
-  50% {
-    right: calc(100% - 60px);
-  }
   100% {
-    right: 20%;
+    right: calc(100% - 60px);
   }
 }
 
 /* ESERCIZIO13 */
+/* le velocità non sono uniformi perchè i rettangolini bianchi partono staccati dal vertice e bisogna dividere l'animazione in 5 punti invece che 4 */
 .ex-13-button:hover .ex-13-top-white{
     animation: gira-in-tondo infinite linear 4s;
 }
@@ -179,18 +174,32 @@
   }
 }
 
-/* .ex-13-button:hover .ex-13-bottom-white{
-    animation: muovi-a-sinistra-e-torna infinite linear 4s;
+.ex-13-button:hover .ex-13-bottom-white{
+    animation: gira-in-tondo2 infinite linear 4s;
 }
 
-@keyframes muovi-a-sinistra-e-torna {
+@keyframes gira-in-tondo2 {
   0% {
-    left: calc(100% - 90px);
+    right: 20%;
   }
-  50% {
-    left: 10%;
+  30% {
+    right: calc(100% - 30px);
+    top: calc(100% - 10px);
   }
-  100% {
-    left: calc(100% - 90px);
+  45% {
+      right:  calc(100% - 30px);
+      top: -10px;
   }
-} */
+  75% {
+    right: -30px;
+    top: -10px;
+  }
+  90% {
+    right: -30px;
+    top: calc(100% - 10px);
+  }
+  100%{
+    right: 20%;
+    top: calc(100% - 10px);
+  }
+}
